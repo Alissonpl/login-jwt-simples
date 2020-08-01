@@ -6,15 +6,18 @@ import { Context } from '../../Context/AuthContext';
 
 export default function Logon(){
    
-   const { login, setLogin, senha, setSenha, handleLogin } = useContext(Context);
+   const { login, setLogin, senha, setSenha, handleRegister } = useContext(Context);
+
+
+
 
 return (
         
         <div className="logon-container">
             <section className="form">
 
-                <form onSubmit={handleLogin}>
-                    <h1>Faça seu logon</h1>
+                <form onSubmit={handleRegister}>
+                    <h1>Faça seu cadastro</h1>
                     <input 
                     placeholder="Login"
                     value={login}
@@ -29,7 +32,10 @@ return (
                     <button className="button" type="submit">Entrar</button>
                
 
-                    
+                    <Link className="back-link" to="/dashboard">
+                        <FiLogIn size={16} color="#E02041"/>
+                       Dashboard
+                    </Link>
                 </form>
 
 

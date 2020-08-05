@@ -2,11 +2,9 @@ const connection = require("../../database/index");
 
 require("dotenv-safe").config();
 const jwt = require("jsonwebtoken");
-
 module.exports = {
   async index(request, response) {
     const usuario = await connection("usuario").select("*");
-
     return response.json(usuario);
   },
 
@@ -25,43 +23,28 @@ module.exports = {
       var token = jwt.sign({ logar }, process.env.SECRET, {
         expiresIn: 3000000, // expires in 5min
       });
-      
-      response.json({ auth: true, token: token, logar: logar });
+
+      response.status(200).json({ auth: true, token: token, logar: logar });
     }
   },
 
   async create(request, response) {
-   // const {
-     const login = request.body.login, 
-     senha = request.body.senha
-  //  console.log(login);
-    //console.log(senha);
-
-    //} = request.body;
+    const login = request.body.login,
+      senha = request.body.senha;
 
     const logar = await connection("usuario")
-    .where("login", login)
-    .select("id");
+      .where("login", login)
+      .select("id");
 
+    if (logar == "") {
+      const [id] = await connection("usuario").insert({
+        login,
+        senha,
+      });
 
-
-  if (logar == "") {
-
-    const [id] = await connection("usuario").insert({
-      login,
-      senha
-    });
-
-    return response.json({status: "cadastrado" });
-   
-  } else {
-    
-    response.json({ status: "não pode" });
-  }
-
-
-
-
+      return response.status(200).json({ status: "cadastrado" });
+    } else {
+      response.status(401).json({ status: "não pode" });
+    }
   },
-  
 };

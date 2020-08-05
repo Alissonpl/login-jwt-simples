@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 import api from "../../services/api";
 import history from "../../history";
 
@@ -24,38 +23,48 @@ export default function useAuth() {
       alert("Falha no login, tente novamente.");
     }
   }
-  
+
   async function handleRegister(e) {
     e.preventDefault();
 
+    try {
+      const response = await api.post(
+        "createe/",
+        { login, senha },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            token: localStorage.getItem("x-acess-token"),
+          },
+        }
+      );
 
-  try {
-      const response = await api.post("createe/", {login, senha});
       alert(response.data.status);
-      if(response.data.status=="cadastrado"){
-        history.push("/login");
-      }
-    
-    
+      setLogin("");
+      setSenha("");
     } catch (err) {
       alert("Falha no cadastro, tente novamente.");
     }
-    
   }
-
-
-
 
   async function handleLogout(e) {
     e.preventDefault();
 
     const response = await api.post("logout/");
-    alert(response.data.token);
+    alert("Saindo");
     localStorage.removeItem("auth");
     localStorage.setItem("token", response.data.token);
     api.defaults.headers.token = undefined;
     history.push("/login");
   }
 
-  return { handleLogout, login, setLogin, senha, setSenha, handleLogin, handleRegister };
+  return {
+    handleLogout,
+    login,
+    setLogin,
+    senha,
+    setSenha,
+    handleLogin,
+    handleRegister,
+  };
 }

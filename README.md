@@ -1,5 +1,5 @@
 <h1 align="center">
-    Login com Autenticação nas rotas do backend com Token e nas rotas frontend 
+    Login com Autenticação nas rotas no backend com Token e nas rotas frontend
 </h1>
 
 <p align="center">
@@ -27,6 +27,13 @@ As principais tecnologias deste projeto:
 
 ## 💻 Projeto
 
-O projeto foi desenvolvido com intuito de obter infomação e apredizado sobre as tecnologias citadas acima. Programado um CRUD simples de produto, Create (Criação), Read (Consulta), Update (Atualização) e Delete (Destruição).
+Objetivo desse projeto foi obter Conhecimento:
+-Segurança e autenticação de rotas com JSON WEB TOKEN sobre as informações enviadas e recebidas do servidor;
+-Autenticação nas rotas do frontend com React js;
+-Obter a primeira impressão de como a Bibilioteca do Reactjs Material UI é usada ou se comporta ao layout;
+
+
+
+
 
 ---

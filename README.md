@@ -28,9 +28,9 @@ As principais tecnologias deste projeto:
 ## 💻 Projeto
 
 Objetivo desse projeto foi obter Conhecimento:
--Segurança e autenticação de rotas com JSON WEB TOKEN sobre as informações enviadas e recebidas do servidor;
--Autenticação nas rotas do frontend com React js;
--Obter a primeira impressão de como a Bibilioteca do Reactjs Material UI é usada ou se comporta ao layout;
+- Segurança e autenticação de rotas com JSON WEB TOKEN sobre as informações enviadas e recebidas do servidor;
+- Autenticação nas rotas do frontend com React js;
+- Obter a primeira impressão de como a Bibilioteca do Reactjs Material UI é usada ou se comporta ao layout;
 
 
 

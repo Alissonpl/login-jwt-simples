@@ -17,7 +17,7 @@
 
 ## :rocket: Tecnologias
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+As principais tecnologias deste projeto:
 
 - [Node.js](https://nodejs.org/en/)
 - [React](https://reactjs.org)

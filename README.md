@@ -15,6 +15,9 @@
   <img alt="cadastro" src="https://github.com/Alissonpl/login-jwt-simples/blob/master/cadastro.png" width="70%">
 </p>
 
+
+<img alt="cadastro" src="https://github.com/Alissonpl/login-jwt-simples/blob/master/cadastro.png" width="70%">
+
 ## :rocket: Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:

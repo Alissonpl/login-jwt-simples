@@ -10,9 +10,9 @@
 <br>
 
 <p align="center">
-  <img alt="login" src="https://github.com/Alissonpl/login-jwt-simples/blob/master/login.png" width="100%">
-  <img alt="dashboard" src="https://github.com/Alissonpl/login-jwt-simples/blob/master/dash.png" width="100%">
-  <img alt="cadastro" src="https://github.com/Alissonpl/login-jwt-simples/blob/master/cadastro.png" width="100%">
+  <img alt="login" src="https://github.com/Alissonpl/login-jwt-simples/blob/master/login.png" width="50%">
+  <img alt="dashboard" src="https://github.com/Alissonpl/login-jwt-simples/blob/master/dash.png" width="50%">
+  <img alt="cadastro" src="https://github.com/Alissonpl/login-jwt-simples/blob/master/cadastro.png" width="50%">
 </p>
 
 ## :rocket: Tecnologias
